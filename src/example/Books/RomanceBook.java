@@ -26,6 +26,11 @@ public class RomanceBook extends Book implements IBuy{
         super(title + " "+type + " "+author);
     }
 
+
+    /**
+     * The author of the book
+     */
+    String mAuthor;
     /**
      * Verifies if the author is popular(starts with Reid)
      * @param bookAuthor
@@ -36,6 +41,15 @@ public class RomanceBook extends Book implements IBuy{
         if(bookAuthor != null && bookAuthor.startsWith("Reid"))
             return true;
         return false;
+    }
+
+    /**
+     * gets the name of the author
+     * @return
+     */
+    public String getAuthor()
+    {
+        return this.mAuthor;
     }
     /**
      * Method to borrow one book
