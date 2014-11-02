@@ -4,6 +4,7 @@ import example.Books.Book;
 import example.Books.DramaBook;
 import example.Books.ScienceBook;
 import example.exceptions.buyException;
+import example.exceptions.readException;
 import example.interfaces.IBuy;
 
 /**
@@ -11,7 +12,7 @@ import example.interfaces.IBuy;
  */
 public class Main {
 
-    public static void main(String[] args) throws buyException {
+    public static void main(String[] args) throws buyException, readException {
         IBuy book = new DramaBook("Dragoste tarzie");
         Book science = new ScienceBook("Avatarul");
 
@@ -28,6 +29,11 @@ public class Main {
             ex.printStackTrace();
         }
 
+        try {
+            book.read();
+        } catch (readException e) {
+            e.printStackTrace();
+        }
     }
 }
 ;
