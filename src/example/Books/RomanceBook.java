@@ -9,11 +9,19 @@ import example.interfaces.IBuy;
  */
 public class RomanceBook extends Book implements IBuy{
     /**
-     * Simple Contructor : initializes only with the title of the book
+     * Simple Contructor : initializes only with the title of the book, and the other values are default
      * @param title
      */
+
+    private boolean mHasMovie;
+
     public  RomanceBook(String title){
+
         super(title);
+        setmNr_pages(0);
+        setPublishing("");
+        setTitle("");
+        setType("Romance");
     }
 
     /**
@@ -23,7 +31,13 @@ public class RomanceBook extends Book implements IBuy{
      * @param author
      */
     public  RomanceBook(String title,String type, String author){
-        super(title + " "+type + " "+author);
+
+        //super(title + " "+type + " "+author);
+        super(title);
+        setmNr_pages(0);
+        setPublishing("");
+        setTitle("");
+        setType(type);
     }
 
 
@@ -76,4 +90,7 @@ public class RomanceBook extends Book implements IBuy{
         if(getTitle()==null)
             throw new readException("The book does not exist!");
     }
+
+    public boolean getmHasMovie(){return this.mHasMovie;}
+    public void setmHasMovie(boolean has){this.mHasMovie=has;}
 }

@@ -13,6 +13,7 @@ public class ScienceBook extends Book implements IBuy {
      * basic constructor
      * @param title
      */
+    private String mArticle;
     public ScienceBook(String title)
     {
         super(title);
@@ -52,4 +53,6 @@ public class ScienceBook extends Book implements IBuy {
         if(getTitle()==null)
             throw new readException("The book does not exist!");
     }
+    public void setmArticle(String article){this.mArticle=article;}
+    public String getmArticle(){return this.mArticle;}
 }

@@ -26,9 +26,12 @@ public class DramaBook extends Book implements IBuy
      * @param title
      * @param type
      */
+    private int mNr_volumes;
     public DramaBook(String title, String type)
     {
-        super(title + " " +type );
+        super(title);
+        this.setType(type);
+        setmNr_volumes(100);
 
     }
     /**
@@ -57,4 +60,6 @@ public class DramaBook extends Book implements IBuy
         if(getTitle()==null)
             throw new readException("The book does not exist!");
     }
+    public int getmNr_volumes(){return this.mNr_volumes;}
+    public void setmNr_volumes(int nr){this.mNr_volumes=nr;}
 }

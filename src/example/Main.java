@@ -49,7 +49,13 @@ public class Main {
        catch (readException e) {
            e.printStackTrace();
        }
+        dramaB.setmNr_volumes(120);
+        dramaB.setType("drama");
+        dramaB.setPublishing("Corint");
 
+        System.out.println("The author of the  book" +romanceB.getTitle() + "is : " +romanceB.getAuthor());
+
+        science.setmNr_pages(1165);
 
 
 
